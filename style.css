@@ -26,9 +26,15 @@ nav {
     border-bottom: 5px solid #2d2d2d;
 }
 
+.logo {
+    display: none;
+}
+
 nav ul {
+    vertical-align: middle;
     margin: 0;
     padding: 0;
+    display: inline;
 }
 
 nav ul li {
@@ -111,6 +117,12 @@ a:hover {
     nav {
         position: sticky;
         top: 0;
+    }
+
+    .logo {
+        display: inline;
+        vertical-align: middle;
+        padding: 5px;
     }
 
     nav ul {
