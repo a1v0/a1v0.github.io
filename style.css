@@ -27,6 +27,7 @@ a:link,
 a:visited {
     font-weight: bold;
     color: hotpink;
+    text-decoration-style: dashed;
 }
 
 a:hover {
