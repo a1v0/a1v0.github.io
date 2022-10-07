@@ -32,7 +32,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: block;
     padding: 13px;
 }
 
@@ -108,6 +108,15 @@ a:hover {
 }
 
 @media (min-width:900px) {
+    nav {
+        position: sticky;
+        top: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        /* padding: 13px; */
+    }
 
     .profile-pic {
         float: right;
