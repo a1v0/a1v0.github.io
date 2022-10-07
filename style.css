@@ -30,25 +30,26 @@ nav {
     display: none;
 }
 
-nav ul {
+nav.menu ul {
     vertical-align: middle;
     margin: 0;
     padding: 0;
     display: inline;
 }
 
-nav ul li {
+nav.menu ul li {
     display: block;
     padding: 7px 13px;
 }
 
-nav ul li:hover {
+nav.menu ul li:hover {
     background-color: #bbbbbb;
 }
 
 nav.menu ul li a,
 nav.menu ul li a:hover {
-    color: rgb(12, 144, 12);
+    color: magenta;
+    /* color: rgb(12, 144, 12); */
     text-decoration: underline;
 }
 
@@ -61,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-    border-bottom: 2px black dashed;
+    border-bottom: 2px hotpink dashed;
 }
 
 .intro {
@@ -88,6 +89,7 @@ a:visited {
 
 a:hover {
     text-decoration-style: solid;
+    color: magenta;
 }
 
 .centered {
@@ -95,12 +97,12 @@ a:hover {
 }
 
 .profile-pic {
-    background-color: gainsboro;
+    background-color: pink;
     padding: 10px;
     text-align: center;
     margin: 20px 0px 20px 20px;
     padding: 15px;
-    border: dashed hotpink 3px;
+    border: dashed magenta 3px;
     border-radius: 40px;
 }
 
@@ -111,6 +113,27 @@ a:hover {
 .profile-pic,
 .profile-pic img {
     max-width: 100%;
+}
+
+ul.alternating {
+    list-style: none;
+}
+
+ul.alternating li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 2em;
+}
+
+ul.alternating li:nth-child(even)::before {
+    color: magenta;
+}
+
+ul.alternating li:nth-child(odd)::before {
+    color: hotpink;
 }
 
 @media (min-width:900px) {
@@ -125,12 +148,11 @@ a:hover {
         padding: 5px;
     }
 
-    nav ul {
-        /* margin: 0; */
+    nav.menu ul {
         padding: 13px 13px 13px 0;
     }
 
-    nav ul li {
+    nav.menu ul li {
         display: inline;
         padding: 13px;
     }
