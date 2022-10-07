@@ -9,6 +9,12 @@ hr {
     border: 1px solid black;
 }
 
+.subtitle {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
 a:link,
 a:visited {
     font-weight: bold;
