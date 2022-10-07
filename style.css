@@ -19,6 +19,14 @@ header h1 {
     margin-bottom: 0px;
 }
 
+.magenta {
+    color: magenta;
+}
+
+.hotpink {
+    color: hotpink;
+}
+
 nav {
     background-color: #c9c9c9;
     margin: 0px;
@@ -66,7 +74,7 @@ h6 {
 }
 
 .intro {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .subtitle {
