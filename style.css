@@ -28,12 +28,12 @@ nav {
 
 nav ul {
     margin: 0;
-    padding: 13px 13px 13px 0;
+    padding: 0;
 }
 
 nav ul li {
     display: block;
-    padding: 13px;
+    padding: 7px 13px;
 }
 
 nav ul li:hover {
@@ -113,9 +113,14 @@ a:hover {
         top: 0;
     }
 
+    nav ul {
+        /* margin: 0; */
+        padding: 13px 13px 13px 0;
+    }
+
     nav ul li {
         display: inline;
-        /* padding: 13px; */
+        padding: 13px;
     }
 
     .profile-pic {
