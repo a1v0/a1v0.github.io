@@ -17,13 +17,26 @@
     <input type="button" value="Encrypt"><br>
     <input type="button" value="Decrypt">
 
-    <h2>Things to check before starting</h2>
+    <h2>To-do</h2>
     <ul>
         <li>convert each character in poem into binary form of its ASCII charCode</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>retrieve image data from original image</li>
+        <li>create new image data from original image data, by modifying RGBA values by 1
+            <ul>
+                <li>if current digit in binary ASCII is 0, modify value so that it's even</li>
+                <li>if 1, modify so it's odd</li>
+                <li>after all eight binary digits have been encoded, make ninth cell into an even number</li>
+                <li>once full string is encoded, make ninth index odd number</li>
+                <li>when the decode function runs, it will stop decoding once it finds a ninth index with an odd number in</li>
+            </ul>
+        </li>
+        <li>show changes to image data:
+            <ul>
+                <li>print first X cells of original image data to screen, ideally wrapping values that will change in a span with a specific class or something, so that it's easy to see</li>
+                <li>replace above with new image data, so that audience can see the minor changes</li>
+            </ul>
+        </li>
+        <li>show encoded image side by side with unencoded one?</li>
         <li></li>
         <li></li>
         <li></li>
