@@ -32,6 +32,7 @@ div.links-container ul {
 }
 
 div.links-container ul li {
+    padding: 0 20px;
     background-color: green;
     align-self: stretch;
     flex-direction: column;
