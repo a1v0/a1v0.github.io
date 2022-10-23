@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Frightening Steganography!</title>
 </head>
 
 <body>
-    <h1>Steganography talk</h1>
+    <h1>Concealing a Poem</h1>
+    <h2>Let's put the <em>crypt</em> back into <em>encryption</em>!</h2>
 
-    <canvas id="targetImage"></canvas>
+    <canvas id="encryptCanvas"></canvas>
+    <br>
+    <input type="button" value="Encrypt Poem 🎃" onclick="encrypt(poem)" id="encrypt">
+    <input type="button" value="Decrypt Poem 🎃" onclick="encrypt(poem)" id="decrypt" disabled>
 
-    <input type="button" value="Encrypt"><br>
-    <input type="button" value="Decrypt">
+    <p id="output"></p>
 
     <h2>To-do</h2>
     <ul>

@@ -124,25 +124,25 @@ And the lamp-light o’er him streaming throws his shadow on the floor;
 And my soul from out that shadow that lies floating on the floor
 Shall be lifted—nevermore!`;
 
+const outputPara = document.querySelector("#output");
 
-const targetImage = document.querySelector("#targetImage");
-const targetImageCtx = targetImage.getContext("2d");
+const encryptCanvas = document.querySelector("#encryptCanvas");
+const encryptCanvasCtx = encryptCanvas.getContext("2d");
 
 const stegoSrc = new Image();
 stegoSrc.src = "eatmyshorts.jpg";
 
 stegoSrc.onload = () => {
-    targetImage.width = stegoSrc.width;
-    targetImage.height = stegoSrc.height;
-    targetImageCtx.drawImage(stegoSrc, 0, 0);
-    encrypt(poem);
+    encryptCanvas.width = stegoSrc.width;
+    encryptCanvas.height = stegoSrc.height;
+    encryptCanvasCtx.drawImage(stegoSrc, 0, 0);
+    outputPara.innerHTML = displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
 }
 
-// targetImageCtx.beginPath();
-// targetImageCtx.rect(0, 0, targetImage.width, targetImage.height);
-// targetImageCtx.fillStyle = "red";
-// targetImageCtx.fill();
-
+function displayImageData(imageDataArray) {
+    const outputString = imageDataArray.slice(0, 20).join(", ");
+    return outputString;
+}
 
 function encrypt(poem) {
     const charArray = [];
@@ -155,8 +155,8 @@ function encrypt(poem) {
         charArray.push(binCharCode);
     }
 
-    const origImageData = targetImageCtx.getImageData(0, 0, targetImage.width, targetImage.height).data;
-    const encodedImageData = targetImageCtx.createImageData(targetImage.width, targetImage.height);
+    const origImageData = encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data;
+    const encodedImageData = encryptCanvasCtx.createImageData(encryptCanvas.width, encryptCanvas.height);
 
     // Copy over all data from orig image to new image
     for (let i = 0; i < origImageData.length; ++i) {
@@ -194,7 +194,11 @@ function encrypt(poem) {
         }
 
     }
-    console.log(targetImageCtx.getImageData(0, 0, targetImage.width, targetImage.height).data);
-    targetImageCtx.putImageData(encodedImageData, 0, 0);
-    console.log(targetImageCtx.getImageData(0, 0, targetImage.width, targetImage.height).data);
+    console.log(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
+    encryptCanvasCtx.putImageData(encodedImageData, 0, 0);
+    console.log(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
+
+    outputPara.innerHTML = displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
+    document.querySelector("#encrypt").disabled = true;
+    document.querySelector("#decrypt").disabled = false;
 }

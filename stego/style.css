@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: paleturquoise;
+}
+
+#output {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+input {
+    font-weight: bold;
+    font-family: Chiller;
+    font-size: 3em;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: black;
+    color: #ffa500;
+}
+
+input:disabled {
+    font-weight: bold;
+    font-family: Chiller;
+    font-size: 3em;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #00000081;
+    color: #ffa60081;
+    cursor: not-allowed
+}
