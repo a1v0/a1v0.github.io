@@ -6,64 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Frightening Steganography!</title>
 </head>
 
 <body>
-    <h1>Concealing a Poem</h1>
-    <h2>Let's put the <em>crypt</em> back into <em>encryption</em>!</h2>
+    <h1>☠️Concealing a Poem🕸️</h1>
+    <h2>⚗️Let's put the <u>crypt</u> back into en<u>crypt</u>ion!⚰️</h2>
 
-    <canvas id="encryptCanvas"></canvas>
+    <div class="content-div-flex">
+        <canvas id="encryptCanvas"></canvas>
+        <div>
+            <input type="button" value="Encrypt Poem 🕷️" onclick="encrypt(poem)" id="encrypt">
+            <input type="button" value="Decrypt Poem 🎃" id="decrypt" onclick="decrypt(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)">
+        </div>
+        <p id="output"></p>
+
+    </div>
+
     <br>
-    <input type="button" value="Encrypt Poem 🎃" onclick="encrypt(poem)" id="encrypt">
-    <input type="button" value="Decrypt Poem 🎃" id="decrypt" onclick="decrypt(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)" disabled>
 
-    <p id="output"></p>
-
-    <h2>To-do</h2>
-    <ul>
-        <li>convert each character in poem into binary form of its ASCII charCode</li>
-        <li>retrieve image data from original image</li>
-        <li>create new image data from original image data, by modifying RGBA values by 1
-            <ul>
-                <li>if current digit in binary ASCII is 0, modify value so that it's even</li>
-                <li>if 1, modify so it's odd</li>
-                <li>after all eight binary digits have been encoded, make ninth cell into an even number</li>
-                <li>once full string is encoded, make ninth index odd number</li>
-                <li>when the decode function runs, it will stop decoding once it finds a ninth index with an odd number in</li>
-            </ul>
-        </li>
-        <li>show changes to image data:
-            <ul>
-                <li>print first X cells of original image data to screen, ideally wrapping values that will change in a span with a specific class or something, so that it's easy to see</li>
-                <li>replace above with new image data, so that audience can see the minor changes</li>
-            </ul>
-        </li>
-        <li>show encoded image side by side with unencoded one?</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
 </body>
 
 </html>

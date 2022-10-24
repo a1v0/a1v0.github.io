@@ -1,17 +1,53 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: paleturquoise;
+    background-color: #472C4C;
+    color: lightgreen
+}
+
+h1,
+h2 {
+    font-family: Creepster;
+    text-align: center;
+    margin: 30px 0;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+div.content-div-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+div.content-div-flex * {
+    margin: 0 10px;
+}
+
+div.content-div-flex div {
+    display: flex;
+    flex-direction: column;
+}
+
+#imgDataOutput {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 5em;
+    font-weight: bold;
 }
 
 #output {
-    font-family: Consolas, 'Courier New', Courier, monospace;
-    font-size: 2em;
-    font-weight: bold;
+    text-align: left;
+    padding: 0;
 }
 
 input {
     font-weight: bold;
-    font-family: Chiller;
+    font-family: Creepster;
     font-size: 3em;
     border-radius: 7px;
     padding: 20px;
@@ -19,13 +55,14 @@ input {
     color: #ffa500;
 }
 
-input:disabled {
-    font-weight: bold;
-    font-family: Chiller;
-    font-size: 3em;
-    border-radius: 7px;
-    padding: 20px;
-    background-color: #00000081;
-    color: #ffa60081;
-    cursor: not-allowed;
+input#decrypt {
+    display: none;
+}
+
+
+#printed-poem {
+    font-size: 2em;
+    font-family: 'Bell MT';
+    font-weight: normal;
+    font-style: italic;
 }

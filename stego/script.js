@@ -1,4 +1,4 @@
-const poem = `<span style="font-family:'Bell MT';font-weight:normal;font-style:italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once upon a midnight dreary, while I pondered, weak and weary,<br>
+const poem = `<span id="printed-poem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once upon a midnight dreary, while I pondered, weak and weary,<br>
 Over many a quaint and curious volume of forgotten lore&mdash;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While I nodded, nearly napping, suddenly there came a tapping,<br>
 As of some one gently rapping, rapping at my chamber door.<br>
@@ -130,13 +130,13 @@ const encryptCanvas = document.querySelector("#encryptCanvas");
 const encryptCanvasCtx = encryptCanvas.getContext("2d");
 
 const stegoSrc = new Image();
-stegoSrc.src = "eatmyshorts.jpg";
+stegoSrc.src = "eatmyshorts-slightly-smaller.jpg";
 
 stegoSrc.onload = () => {
     encryptCanvas.width = stegoSrc.width;
     encryptCanvas.height = stegoSrc.height;
     encryptCanvasCtx.drawImage(stegoSrc, 0, 0);
-    outputPara.innerHTML = displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
+    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)}</span>`;
 }
 
 function displayImageData(imageDataArray) {
@@ -200,9 +200,9 @@ function encrypt(poem) {
 
     encryptCanvasCtx.putImageData(encodedImageData, 0, 0);
 
-    outputPara.innerHTML = displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
-    document.querySelector("#encrypt").disabled = true;
-    document.querySelector("#decrypt").disabled = false;
+    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)}</span>`;
+    document.querySelector("#encrypt").style.display = "none";
+    document.querySelector("#decrypt").style.display = "block";
     // document.querySelector("#decrypt").onclick = decrypt(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
 }
 
