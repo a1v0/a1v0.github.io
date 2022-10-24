@@ -17,7 +17,7 @@
     <canvas id="encryptCanvas"></canvas>
     <br>
     <input type="button" value="Encrypt Poem 🎃" onclick="encrypt(poem)" id="encrypt">
-    <input type="button" value="Decrypt Poem 🎃" onclick="encrypt(poem)" id="decrypt" disabled>
+    <input type="button" value="Decrypt Poem 🎃" id="decrypt" onclick="decrypt(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)" disabled>
 
     <p id="output"></p>
 

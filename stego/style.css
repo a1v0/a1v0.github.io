@@ -27,5 +27,5 @@ input:disabled {
     padding: 20px;
     background-color: #00000081;
     color: #ffa60081;
-    cursor: not-allowed
+    cursor: not-allowed;
 }
