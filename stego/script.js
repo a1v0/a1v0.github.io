@@ -231,4 +231,5 @@ function decrypt(imageDataArray) {
     }
     console.log(output);
     outputPara.innerHTML = output.join("");
+    document.querySelector("#nevermore").style.display = "block";
 }
