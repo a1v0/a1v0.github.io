@@ -1,4 +1,4 @@
-const poem = `<span id="printed-poem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once upon a midnight dreary, while I pondered, weak and weary,<br>
+const poem = `<h2 style="text-align:left;text-shadow: 5px 5px #cc0000;color:#ffffff">The Raven&mdash;Edgar Allen Poe</h2><span id="printed-poem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once upon a midnight dreary, while I pondered, weak and weary,<br>
 Over many a quaint and curious volume of forgotten lore&mdash;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While I nodded, nearly napping, suddenly there came a tapping,<br>
 As of some one gently rapping, rapping at my chamber door.<br>
@@ -47,10 +47,10 @@ In there stepped a stately Raven of the saintly days of yore;<br>
 Perched upon a bust of Pallas just above my chamber door&mdash;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perched, and sat, and nothing more.<br>
 <br>
-Then this ebony bird beguiling my sad fancy into smiling,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then this ebony bird beguiling my sad fancy into smiling,<br>
 By the grave and stern decorum of the countenance it wore,<br>
-&ldquo;Though thy crest be shorn and shaven, thou,&rdquo; I said, &ldquo;art sure no craven,<br>
-Ghastly grim and ancient Raven wandering from the Nightly shore&mdash;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;Though thy crest be shorn and shaven, thou,&rdquo; I said, &ldquo;art sure no craven,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ghastly grim and ancient Raven wandering from the Nightly shore&mdash;<br>
 Tell me what thy lordly name is on the Night&rsquo;s Plutonian shore!&rdquo;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quoth the Raven &ldquo;Nevermore.&rdquo;<br>
 <br>
