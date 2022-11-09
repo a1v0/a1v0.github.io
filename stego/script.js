@@ -136,8 +136,15 @@ stegoSrc.onload = () => {
     encryptCanvas.width = stegoSrc.width;
     encryptCanvas.height = stegoSrc.height;
     encryptCanvasCtx.drawImage(stegoSrc, 0, 0);
-    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)}</span>`;
-}
+    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(
+        encryptCanvasCtx.getImageData(
+            0,
+            0,
+            encryptCanvas.width,
+            encryptCanvas.height
+        ).data
+    )}</span>`;
+};
 
 function displayImageData(imageDataArray) {
     const outputString = imageDataArray.slice(0, 20).join(", ");
@@ -156,8 +163,16 @@ function encrypt(poem) {
     }
     // console.log(charArray);
 
-    const origImageData = encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data;
-    const encodedImageData = encryptCanvasCtx.createImageData(encryptCanvas.width, encryptCanvas.height);
+    const origImageData = encryptCanvasCtx.getImageData(
+        0,
+        0,
+        encryptCanvas.width,
+        encryptCanvas.height
+    ).data;
+    const encodedImageData = encryptCanvasCtx.createImageData(
+        encryptCanvas.width,
+        encryptCanvas.height
+    );
 
     // Copy over all data from orig image to new image
     for (let i = 0; i < origImageData.length; ++i) {
@@ -195,15 +210,35 @@ function encrypt(poem) {
         }
     }
 
-    console.log(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
-    console.log(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
+    console.log(
+        encryptCanvasCtx.getImageData(
+            0,
+            0,
+            encryptCanvas.width,
+            encryptCanvas.height
+        ).data
+    );
+    console.log(
+        encryptCanvasCtx.getImageData(
+            0,
+            0,
+            encryptCanvas.width,
+            encryptCanvas.height
+        ).data
+    );
 
     encryptCanvasCtx.putImageData(encodedImageData, 0, 0);
 
-    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data)}</span>`;
+    outputPara.innerHTML = `<span id="imgDataOutput">${displayImageData(
+        encryptCanvasCtx.getImageData(
+            0,
+            0,
+            encryptCanvas.width,
+            encryptCanvas.height
+        ).data
+    )}</span>`;
     document.querySelector("#encrypt").style.display = "none";
     document.querySelector("#decrypt").style.display = "block";
-    // document.querySelector("#decrypt").onclick = decrypt(encryptCanvasCtx.getImageData(0, 0, encryptCanvas.width, encryptCanvas.height).data);
 }
 
 function decrypt(imageDataArray) {
