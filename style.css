@@ -5,7 +5,10 @@
 
 body {
     background-color: #f8bb13;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 div {
@@ -16,9 +19,7 @@ div {
 }
 
 div.links-container {
-    position: absolute;
-    top: 5rem;
-    bottom: 5rem;
+    height: 100vh;
 }
 
 div.links-container ul {
@@ -47,6 +48,13 @@ div.links-container ul li:nth-child(even) {
     background-color: #0274d2;
 }
 
+div.links-container ul li.smaller {
+    flex-basis: 5%;
+    flex-grow: 0;
+    background-color: #f8bb13;
+    color: black;
+}
+
 div.links-container ul li a,
 div.links-container ul li a:visited {
     display: block;
@@ -57,26 +65,24 @@ div.links-container ul li a:visited {
     font-weight: bold;
 }
 
-div.header,
-div.footer {
-    height: 5rem;
+div.links-container ul li.smaller a,
+div.links-container ul li.smaller a:visited {
+    width: initial;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline !important;
 }
 
-div.footer {
-    position: absolute;
-    bottom: 0;
-}
-
-@media (max-width:900px) {
-
+@media (max-width: 900px) {
     div.links-container ul li a,
     div.links-container ul li a:visited {
         font-size: 3.5rem;
     }
 }
 
-@media (max-width:600px) {
-
+@media (max-width: 600px) {
     div.links-container ul li a,
     div.links-container ul li a:visited {
         font-size: 2.5rem;
