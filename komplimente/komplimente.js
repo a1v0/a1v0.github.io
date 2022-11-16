@@ -35,5 +35,3 @@ function nameWithCaps(name) {
     name[0] = name[0].toUpperCase();
     return name.join("");
 }
-
-function writeCompliment(compliment) {}
