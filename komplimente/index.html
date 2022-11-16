@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./komplimente.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Komplimentomat</title>
+</head>
+
+<body>
+    <h1>Der Komplimentomat</h1>
+    <form>
+        <label for="name">Ich heiße:</label><br><br>
+        <input id="name" type="text"><br><br>
+        und finde, dass Computer mich:<br><br>
+        <input type="radio" name="siedu" id="du" checked><label for="du"> dutzen sollen</label><br>
+        <input type="radio" name="siedu" id="sie"><label for="sie"> sietzen sollen</label><br><br>
+        <input type="button" onclick="komplimente()" value="Los geht&rsquo;s!">
+    </form>
+    <div id="output"></div>
+</body>
+
+</html>

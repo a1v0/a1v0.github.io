@@ -1,0 +1,44 @@
+body {
+    background-color: teal;
+    color: #eeeeee;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 2em;
+}
+h1 {
+    border-bottom: solid #eeeeee 5px;
+}
+input[type="button"],
+input[type="text"] {
+    min-width: 400px;
+    padding: 10px;
+    font-size: 1em;
+}
+input[type="radio"] {
+    margin-left: 30px;
+}
+
+#output {
+    border-radius: 10px;
+    background-color: beige;
+    color: #1a1a1a;
+    padding: 20px;
+    margin: 15px;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 15px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 1.5em;
+        border-width: 3px;
+    }
+    input[type="button"],
+    input[type="text"] {
+        width: 80vw;
+        min-width: 0;
+    }
+}
