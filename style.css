@@ -7,8 +7,6 @@ body {
     background-color: #f8bb13;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 div.links-container {
@@ -29,7 +27,6 @@ div.links-container ul {
     overflow: scroll;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 div.links-container ul li {
@@ -49,13 +46,19 @@ div.links-container ul li.smaller {
 
 div.links-container ul li a,
 div.links-container ul li a:visited {
-    display: block;
-    width: 100%;
-    height: 100%;
+    /* 
+        NOTE TO SELF:
+        This article looks like it'll help on the quest to make a link the size of its container:
+        https://www.labnol.org/code/19639-turn-div-clickable-link
+    */
     font-size: 5rem;
     color: #fdfdfd;
     text-decoration: none;
     font-weight: bold;
+}
+p.subtitle {
+    margin-top: 25px;
+    font-size: 2em;
 }
 
 div.links-container ul li.smaller a,
@@ -78,5 +81,8 @@ div.links-container ul li.smaller a:visited {
     div.links-container ul li a,
     div.links-container ul li a:visited {
         font-size: 2.5rem;
+    }
+    p.subtitle {
+        font-size: 1.8em;
     }
 }
