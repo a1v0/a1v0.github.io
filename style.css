@@ -1,8 +1,8 @@
 :root {
     --dark-shade: #073b4c;
-    --brand-colour: #fdbf2d;
-    --light-accent: #00aae3;
-    --light-shade: #e9e9ff;
+    --brand-colour: #ecb229;
+    --light-accent: #03a4d9;
+    --light-shade: #eeeefd;
 }
 
 * {
@@ -14,6 +14,10 @@ body {
     background-color: var(--dark-shade);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
+}
+
+p {
+    padding-bottom: 10px;
 }
 
 div.links-container {
@@ -76,6 +80,15 @@ div.links-container ul li.smaller a:visited {
     text-decoration: underline;
     font-weight: normal;
     display: inline;
+}
+
+a.header-link {
+    cursor: pointer;
+    display: block;
+}
+
+div.infobox {
+    display: none;
 }
 
 @media (max-width: 900px) {
