@@ -1,17 +1,24 @@
+:root {
+    --dark-shade: #073b4c;
+    --brand-colour: #fdbf2d;
+    --light-accent: #00aae3;
+    --light-shade: #e9e9ff;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #073b4c;
+    background-color: var(--dark-shade);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
 }
 
 div.links-container {
     height: 100vh;
-    background-color: #073b4c;
+    background-color: var(--dark-shade);
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -31,18 +38,18 @@ div.links-container ul {
 
 div.links-container ul li {
     flex-grow: 1;
-    background-color: #00aae3;
+    background-color: var(--light-accent);
     padding: 20px;
 }
 
 div.links-container ul li:nth-child(even) {
-    background-color: #fdbf2d;
+    background-color: var(--brand-colour);
 }
 
 div.links-container ul li.smaller {
     flex-grow: 0;
-    color: #fdfdfd;
-    background-color: #073b4c;
+    color: var(--light-shade);
+    background-color: var(--dark-shade);
 }
 
 div.links-container ul li a,
@@ -53,7 +60,7 @@ div.links-container ul li a:visited {
         https://www.labnol.org/code/19639-turn-div-clickable-link
     */
     font-size: 5rem;
-    color: #e9e9ff;
+    color: var(--light-shade);
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,7 +72,7 @@ p.subtitle {
 div.links-container ul li.smaller a,
 div.links-container ul li.smaller a:visited {
     font-size: 1em;
-    color: #fdfdfd;
+    color: var(--light-shade);
     text-decoration: underline;
     font-weight: normal;
     display: inline;
