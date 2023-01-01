@@ -1,4 +1,4 @@
-const headerLinks = document.getElementsByClassName("link-header");
+const headerLinks = document.getElementsByClassName("header-link");
 for (let i = 0; i < headerLinks.length; ++i) {
     headerLinks[i].addEventListener("click", toggleDisplay);
 }
