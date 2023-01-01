@@ -28,7 +28,7 @@ div.links-container {
     vertical-align: middle;
 }
 
-div.links-container ul {
+div.links-container ul.nav-links {
     position: absolute;
     top: 0;
     left: 0;
@@ -40,24 +40,24 @@ div.links-container ul {
     flex-direction: column;
 }
 
-div.links-container ul li {
+div.links-container ul.nav-links > li {
     flex-grow: 1;
     background-color: var(--light-accent);
     padding: 20px;
 }
 
-div.links-container ul li:nth-child(even) {
+div.links-container ul.nav-links > li:nth-child(even) {
     background-color: var(--brand-colour);
 }
 
-div.links-container ul li.smaller {
+div.links-container ul.nav-links > li.smaller {
     flex-grow: 0;
     color: var(--light-shade);
     background-color: var(--dark-shade);
 }
 
-div.links-container ul li a,
-div.links-container ul li a:visited {
+div.links-container ul.nav-links > li a,
+div.links-container ul.nav-links > li a:visited {
     /* 
         NOTE TO SELF:
         This article looks like it'll help on the quest to make a link the size of its container:
@@ -73,13 +73,21 @@ p.subtitle {
     font-size: 2em;
 }
 
-div.links-container ul li.smaller a,
-div.links-container ul li.smaller a:visited {
+div.links-container ul.nav-links > li.smaller a,
+div.links-container ul.nav-links > li.smaller a:visited {
     font-size: 1em;
     color: var(--light-shade);
     text-decoration: underline;
     font-weight: normal;
     display: inline;
+}
+
+ul.sub-list {
+    list-style-type: disc;
+}
+ul.sub-list > li {
+    text-align: left;
+    margin: 0 30px;
 }
 
 a.header-link {
@@ -92,18 +100,26 @@ div.infobox {
     background-color: rgba(238, 238, 253, 0.7);
     border-radius: 10px;
     padding: 15px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 @media (max-width: 900px) {
-    div.links-container ul li a,
-    div.links-container ul li a:visited {
+    div.links-container ul.nav-links > li a,
+    div.links-container ul.nav-links > li a:visited {
         font-size: 3.5rem;
+    }
+
+    div.infobox {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    div.links-container ul li a,
-    div.links-container ul li a:visited {
+    div.links-container ul.nav-links > li a,
+    div.links-container ul.nav-links > li a:visited {
         font-size: 2.5rem;
     }
     p.subtitle {
