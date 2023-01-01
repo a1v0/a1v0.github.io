@@ -56,8 +56,8 @@ div.links-container ul.nav-links > li.smaller {
     background-color: var(--dark-shade);
 }
 
-div.links-container ul.nav-links > li a,
-div.links-container ul.nav-links > li a:visited {
+div.links-container ul.nav-links > li > a,
+div.links-container ul.nav-links > li > a:visited {
     /* 
         NOTE TO SELF:
         This article looks like it'll help on the quest to make a link the size of its container:
@@ -73,8 +73,8 @@ p.subtitle {
     font-size: 2em;
 }
 
-div.links-container ul.nav-links > li.smaller a,
-div.links-container ul.nav-links > li.smaller a:visited {
+div.links-container ul.nav-links > li.smaller > a,
+div.links-container ul.nav-links > li.smaller > a:visited {
     font-size: 1em;
     color: var(--light-shade);
     text-decoration: underline;
@@ -106,8 +106,8 @@ div.infobox {
 }
 
 @media (max-width: 900px) {
-    div.links-container ul.nav-links > li a,
-    div.links-container ul.nav-links > li a:visited {
+    div.links-container ul.nav-links > li > a,
+    div.links-container ul.nav-links > li > a:visited {
         font-size: 3.5rem;
     }
 
@@ -118,8 +118,8 @@ div.infobox {
 }
 
 @media (max-width: 600px) {
-    div.links-container ul.nav-links > li a,
-    div.links-container ul.nav-links > li a:visited {
+    div.links-container ul.nav-links > li > a,
+    div.links-container ul.nav-links > li > a:visited {
         font-size: 2.5rem;
     }
     p.subtitle {
