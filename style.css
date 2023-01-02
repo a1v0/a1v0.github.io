@@ -90,6 +90,9 @@ ul.sub-list > li {
     text-align: left;
     margin: 0 30px;
 }
+ul.sub-list > li > p {
+    font-size: 1rem;
+}
 ul.sub-list > li > ul {
     font-size: 1rem;
     margin: 0 30px;
