@@ -83,11 +83,23 @@ div.links-container ul.nav-links > li.smaller > a:visited {
 }
 
 ul.sub-list {
-    list-style-type: disc;
+    list-style-type: none;
+    font-size: 1.5rem;
 }
 ul.sub-list > li {
     text-align: left;
     margin: 0 30px;
+}
+ul.sub-list > li > ul {
+    font-size: 1rem;
+    margin: 0 30px;
+}
+ul.sub-list > li > ul > li {
+    list-style-type: disc;
+    margin-bottom: 7px;
+}
+ul.sub-list > li > ul > li > p {
+    margin-top: 5px;
 }
 
 a.header-link {
