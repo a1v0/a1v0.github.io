@@ -98,7 +98,8 @@ ul.sub-list {
 }
 ul.sub-list > li {
     text-align: left;
-    margin: 0 30px;
+    margin: 5px 30px;
+    border-bottom: 1px dotted var(--dark-shade);
 }
 ul.sub-list > li > p {
     font-size: 1rem;
@@ -128,6 +129,10 @@ div.infobox {
     margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
+}
+div.infobox > p.intro-para {
+    border-bottom: var(--dark-shade) dotted 2px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {
