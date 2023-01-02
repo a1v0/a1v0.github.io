@@ -20,6 +20,15 @@ p {
     padding-bottom: 10px;
 }
 
+a {
+    color: black;
+    border-bottom: 2px dotted black;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 2px solid black;
+}
+
 div.links-container {
     height: 100vh;
     background-color: var(--dark-shade);
@@ -67,11 +76,12 @@ div.links-container ul.nav-links > li > a:visited {
     color: var(--light-shade);
     text-decoration: none;
     font-weight: bold;
+    border: none;
 }
-p.subtitle {
+/* p.subtitle {
     margin-top: 25px;
     font-size: 2em;
-}
+} */
 
 div.links-container ul.nav-links > li.smaller > a,
 div.links-container ul.nav-links > li.smaller > a:visited {
@@ -95,7 +105,7 @@ ul.sub-list > li > p {
 }
 ul.sub-list > li > ul {
     font-size: 1rem;
-    margin: 0 30px;
+    margin-left: 30px;
 }
 ul.sub-list > li > ul > li {
     list-style-type: disc;
