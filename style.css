@@ -1,23 +1,43 @@
+:root {
+    --dark-shade: #073b4c;
+    --brand-colour: #ecb229;
+    --light-accent: #03a4d9;
+    --light-shade: #eeeefd;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #073b4c;
+    background-color: var(--dark-shade);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
 }
 
+p {
+    padding-bottom: 10px;
+}
+
+a {
+    color: black;
+    border-bottom: 2px dotted black;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 2px solid black;
+}
+
 div.links-container {
     height: 100vh;
-    background-color: #073b4c;
+    background-color: var(--dark-shade);
     width: 100%;
     text-align: center;
     vertical-align: middle;
 }
 
-div.links-container ul {
+div.links-container ul.nav-links {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,58 +49,111 @@ div.links-container ul {
     flex-direction: column;
 }
 
-div.links-container ul li {
+div.links-container ul.nav-links > li {
     flex-grow: 1;
-    background-color: #00aae3;
+    background-color: var(--light-accent);
     padding: 20px;
 }
 
-div.links-container ul li:nth-child(even) {
-    background-color: #fdbf2d;
+div.links-container ul.nav-links > li:nth-child(even) {
+    background-color: var(--brand-colour);
 }
 
-div.links-container ul li.smaller {
+div.links-container ul.nav-links > li.smaller {
     flex-grow: 0;
-    color: #fdfdfd;
-    background-color: #073b4c;
+    color: var(--light-shade);
+    background-color: var(--dark-shade);
 }
 
-div.links-container ul li a,
-div.links-container ul li a:visited {
+div.links-container ul.nav-links > li > a,
+div.links-container ul.nav-links > li > a:visited {
     /* 
         NOTE TO SELF:
         This article looks like it'll help on the quest to make a link the size of its container:
         https://www.labnol.org/code/19639-turn-div-clickable-link
     */
     font-size: 5rem;
-    color: #e9e9ff;
+    color: var(--light-shade);
     text-decoration: none;
     font-weight: bold;
+    border: none;
 }
-p.subtitle {
+/* p.subtitle {
     margin-top: 25px;
     font-size: 2em;
-}
+} */
 
-div.links-container ul li.smaller a,
-div.links-container ul li.smaller a:visited {
+div.links-container ul.nav-links > li.smaller > a,
+div.links-container ul.nav-links > li.smaller > a:visited {
     font-size: 1em;
-    color: #fdfdfd;
+    color: var(--light-shade);
     text-decoration: underline;
     font-weight: normal;
     display: inline;
 }
 
+ul.sub-list {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+ul.sub-list > li {
+    text-align: left;
+    margin: 5px 30px;
+    border-bottom: 1px dotted var(--dark-shade);
+}
+ul.sub-list > li:last-child {
+    border-bottom: none;
+}
+ul.sub-list > li > p {
+    font-size: 1rem;
+}
+ul.sub-list > li > ul {
+    font-size: 1rem;
+    margin-left: 30px;
+}
+ul.sub-list > li > ul > li {
+    list-style-type: disc;
+    margin-bottom: 7px;
+}
+ul.sub-list > li > ul > li > p {
+    margin-top: 5px;
+}
+
+a.header-link {
+    cursor: pointer;
+    display: block;
+}
+
+div.infobox {
+    text-align: left;
+    display: none;
+    background-color: rgba(238, 238, 253, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+div.infobox > p.intro-para {
+    border-bottom: var(--dark-shade) dotted 2px;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 900px) {
-    div.links-container ul li a,
-    div.links-container ul li a:visited {
+    div.links-container ul.nav-links > li > a,
+    div.links-container ul.nav-links > li > a:visited {
         font-size: 3.5rem;
+    }
+
+    div.infobox {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    div.links-container ul li a,
-    div.links-container ul li a:visited {
+    div.links-container ul.nav-links > li > a,
+    div.links-container ul.nav-links > li > a:visited {
         font-size: 2.5rem;
     }
     p.subtitle {
