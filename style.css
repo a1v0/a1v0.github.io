@@ -101,6 +101,9 @@ ul.sub-list > li {
     margin: 5px 30px;
     border-bottom: 1px dotted var(--dark-shade);
 }
+ul.sub-list > li:last-child {
+    border-bottom: none;
+}
 ul.sub-list > li > p {
     font-size: 1rem;
 }
