@@ -135,7 +135,7 @@ div.infobox {
     margin-right: 20%;
 }
 div.infobox > p.intro-para {
-    border-bottom: var(--dark-shade) dotted 2px;
+    border-bottom: var(--dark-shade) dotted 3px;
     margin-bottom: 10px;
 }
 
@@ -152,11 +152,14 @@ div.infobox > p.intro-para {
 }
 
 @media (max-width: 600px) {
-    div.links-container ul.nav-links > li > a,
-    div.links-container ul.nav-links > li > a:visited {
-        font-size: 2.5rem;
-    }
     p.subtitle {
         font-size: 1.8em;
+    }
+    div.infobox {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    ul.sub-list li {
+        margin: 5px 0;
     }
 }
