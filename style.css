@@ -125,6 +125,7 @@ a.header-link {
 }
 
 div.infobox {
+    text-align: left;
     display: none;
     background-color: rgba(238, 238, 253, 0.7);
     border-radius: 10px;
