@@ -77,14 +77,12 @@ main.links-container ul.nav-links > li > a:visited {
     */
     font-size: 5rem;
     color: var(--light-shade);
+    text-shadow: 1px 1px 1px var(--dark-shade);
+
     text-decoration: none;
     font-weight: bold;
     border: none;
 }
-/* p.subtitle {
-    margin-top: 25px;
-    font-size: 2em;
-} */
 
 main.links-container ul.nav-links > li.smaller > a,
 main.links-container ul.nav-links > li.smaller > a:visited {
