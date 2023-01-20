@@ -29,7 +29,7 @@ a:hover {
     border-bottom: 2px solid black;
 }
 
-div.links-container {
+main.links-container {
     height: 100vh;
     background-color: var(--dark-shade);
     width: 100%;
@@ -37,7 +37,7 @@ div.links-container {
     vertical-align: middle;
 }
 
-div.links-container ul.nav-links {
+main.links-container ul.nav-links {
     position: absolute;
     top: 0;
     left: 0;
@@ -49,24 +49,24 @@ div.links-container ul.nav-links {
     flex-direction: column;
 }
 
-div.links-container ul.nav-links > li {
+main.links-container ul.nav-links > li {
     flex-grow: 1;
     background-color: var(--light-accent);
     padding: 20px;
 }
 
-div.links-container ul.nav-links > li:nth-child(even) {
+main.links-container ul.nav-links > li:nth-child(even) {
     background-color: var(--brand-colour);
 }
 
-div.links-container ul.nav-links > li.smaller {
+main.links-container ul.nav-links > li.smaller {
     flex-grow: 0;
     color: var(--light-shade);
     background-color: var(--dark-shade);
 }
 
-div.links-container ul.nav-links > li > a,
-div.links-container ul.nav-links > li > a:visited {
+main.links-container ul.nav-links > li > a,
+main.links-container ul.nav-links > li > a:visited {
     /* 
         NOTE TO SELF:
         This article looks like it'll help on the quest to make a link the size of its container:
@@ -83,8 +83,8 @@ div.links-container ul.nav-links > li > a:visited {
     font-size: 2em;
 } */
 
-div.links-container ul.nav-links > li.smaller > a,
-div.links-container ul.nav-links > li.smaller > a:visited {
+main.links-container ul.nav-links > li.smaller > a,
+main.links-container ul.nav-links > li.smaller > a:visited {
     font-size: 1em;
     color: var(--light-shade);
     text-decoration: underline;
@@ -140,8 +140,8 @@ div.infobox > p.intro-para {
 }
 
 @media (max-width: 900px) {
-    div.links-container ul.nav-links > li > a,
-    div.links-container ul.nav-links > li > a:visited {
+    main.links-container ul.nav-links > li > a,
+    main.links-container ul.nav-links > li > a:visited {
         font-size: 3.5rem;
     }
 
