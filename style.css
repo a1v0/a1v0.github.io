@@ -59,6 +59,9 @@ main.links-container ul.nav-links > li:nth-child(even) {
     background-color: var(--brand-colour);
 }
 
+main.links-container ul.nav-links > li.smaller > h1 {
+    font-size: 1.2em;
+}
 main.links-container ul.nav-links > li.smaller {
     flex-grow: 0;
     color: var(--light-shade);
