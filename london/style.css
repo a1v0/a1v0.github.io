@@ -7,5 +7,6 @@
 }
 
 body{
-  background-color: orange;
+  background-color: var(--light-shade);
+  font-family: Arial, Helvetica, sans-serif;
 }
