@@ -1,0 +1,11 @@
+:root{
+  --light-shade: #FAF9F9;
+  --brand-colour: #EF7FAE;
+  --light-accent: #85A0C2;
+  --dark-accent: #4360B0;
+  --dark-shade: #4A415A;
+}
+
+body{
+  background-color: orange;
+}
